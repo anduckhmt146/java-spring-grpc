@@ -9,6 +9,15 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.codewiz</groupId>
+            <artifactId>common-proto</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+    </dependencies>
+
     <artifactId>patient-service</artifactId>
 
     <properties>
