@@ -7,6 +7,10 @@ package com.codewiz.patient;
 service PatientService {
   rpc RegisterPatient (PatientRegistrationRequest) returns (PatientRegistrationResponse);
   rpc GetPatientDetails (PatientDetailsRequest) returns (PatientDetails);
+  rpc StreamPatients (stream PatientRegistrationRequest) returns (Empty);
+}
+
+message Empty {
 }
 
 message PatientRegistrationRequest {

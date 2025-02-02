@@ -11,6 +11,14 @@
 
     <artifactId>appointment-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.codewiz</groupId>
+            <artifactId>common-proto</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>

@@ -49,4 +49,33 @@ public class PatientService extends PatientServiceGrpc.PatientServiceImplBase {
         }
         responseObserver.onCompleted();
     }
+
+    @Override
+    public StreamObserver<PatientRegistrationRequest> streamPatients(StreamObserver<Empty> responseObserver) {
+        return new StreamObserver<PatientRegistrationRequest>() {
+            @Override
+            public void onNext(PatientRegistrationRequest patientRegistrationRequest) {
+                var patient = new Patient(
+                        null,
+                        patientRegistrationRequest.getFirstName(),
+                        patientRegistrationRequest.getLastName(),
+                        patientRegistrationRequest.getEmail(),
+                        patientRegistrationRequest.getPhone(),
+                        patientRegistrationRequest.getAddress()
+                );
+                patientRepository.save(patient);
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                responseObserver.onError(throwable);
+            }
+
+            @Override
+            public void onCompleted() {
+                responseObserver.onNext(Empty.newBuilder().build());
+                responseObserver.onCompleted();
+            }
+        };
+    }
 }
