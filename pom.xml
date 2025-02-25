@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -11,8 +11,8 @@
 	<groupId>com.codewiz</groupId>
 	<artifactId>healthcare-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>healthcare-app</name>
+	<packaging>pom</packaging>
+	<name>healthcare-app</name>
 	<description>healthcare-app</description>
 	<url/>
 	<licenses>
@@ -21,20 +21,21 @@
 	<developers>
 		<developer/>
 	</developers>
-    <modules>
-        <module>patient-service</module>
+	<modules>
+		<module>patient-service</module>
 		<module>doctor-service</module>
 		<module>common-proto</module>
 		<module>appointment-service</module>
 	</modules>
-    <scm>
+	<scm>
 		<connection/>
 		<developerConnection/>
 		<tag/>
 		<url/>
 	</scm>
 	<properties>
-		<java.version>23</java.version>
+		<!-- Use Java 22 as the version -->
+		<java.version>22</java.version>
 		<grpc.version>1.69.0</grpc.version>
 		<protobuf-java.version>3.25.5</protobuf-java.version>
 		<spring-grpc.version>0.3.0</spring-grpc.version>
@@ -52,7 +53,6 @@
 			<groupId>org.springframework.grpc</groupId>
 			<artifactId>spring-grpc-spring-boot-starter</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -88,10 +88,14 @@
 
 	<build>
 		<plugins>
+			<!-- Maven Compiler Plugin Configuration to target Java 22 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
 				<configuration>
+					<source>22</source>
+					<target>22</target>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>

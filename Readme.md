@@ -1,5 +1,27 @@
 # Spring Boot gRPC Project - Health Care Application
 
+Link youtube:
+
+1. How to run Postgre Admin with Docker: https://www.youtube.com/watch?v=qECVC6t_2mU
+2. How to run grpc with Java: https://youtu.be/cMzernb2Q3k?si=e1OorvQBZKmeiK_Y&t=953
+
+
+# Setup
+
+```bash
+mvn clean compile
+```
+
+Go to common-proto/target/generated-sources/protobuf/grpc-java and common-proto/target/generated-sources/protobuf/java => Mark directory as Generated Sources Root
+
+```bash
+
+# How to run PostgreSQL in Docker
+
+```bash
+    docker compose up
+```
+
 
 # Patient Service GRPC Calls
 
