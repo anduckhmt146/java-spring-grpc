@@ -12,14 +12,12 @@ Link youtube:
 mvn clean compile
 ```
 
-Go to common-proto/target/generated-sources/protobuf/grpc-java and common-proto/target/generated-sources/protobuf/java => Mark directory as Generated Sources Root
+Go to common-proto/target/generated-sources/protobuf/grpc-java and common-proto/target/generated-sources/protobuf/java => Mark directory as Generated Sources Root.
+
+Run docker-compose file, or use Postgre Admin in your local machine.
 
 ```bash
-
-# How to run PostgreSQL in Docker
-
-```bash
-    docker compose up
+docker compose up
 ```
 
 
