@@ -16,13 +16,24 @@ Go to common-proto/target/generated-sources/protobuf/grpc-java and common-proto/
 
 Run docker-compose file, or use Postgre Admin in your local machine.
 
+
+# Run Docker
+
 ```bash
 docker compose up
 ```
 
+# Install grpcurl and grpcui
+
+```bash
+brew install grpcurl
+```
+
+```bash
+brew install grpcui
+```
 
 # Patient Service GRPC Calls
-
 
 ## List Services
 ```bash
